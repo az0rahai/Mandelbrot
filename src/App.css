@@ -1,38 +1,86 @@
-.App {
-  text-align: center;
+* {
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+  background: #0b0c10;
+  color: #f5f5f5;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+.app-root {
   min-height: 100vh;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  gap: 16px;
+  padding: 16px;
+}
+
+.controls-panel {
+  max-width: 320px;
+}
+
+.controls-panel h1 {
+  margin: 0 0 8px;
+  font-size: 1.6rem;
+}
+
+.controls-panel p {
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+.controls-panel ul {
+  padding-left: 20px;
+  margin-top: 4px;
+  font-size: 0.9rem;
+}
+
+.control--slider {
+  display: block;
+  margin-top: 16px;
+  font-size: 0.9rem;
+}
+
+.control--slider input[type="range"] {
+  width: 100%;
+  margin-top: 4px;
+}
+
+.main-layout {
+  flex: 1;
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
 }
 
-.App-link {
-  color: #61dafb;
+.canvas-section {
+  width: 100%;
+  max-width: 600px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.canvas-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 8px;
+}
+
+.canvas-header h2 {
+  margin: 0;
+}
+
+.rendering-indicator {
+  font-size: 0.8rem;
+  opacity: 0.8;
+}
+
+canvas {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  background: #000;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
 }
